@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    color: #474554;
+}
+.awak {
+    font-family: 'Roboto', sans-serif;
+}
+.bungkus {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 12px;
+}
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+}
+label {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #8d8d8d;
+}
+.areaWalikan {
+    display: grid;
+    margin-top: 30px;
+}
+textarea {
+    resize: none;
+    min-height: 180px;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+}
+textarea:focus {
+    outline-color: #dadce0;
+}
+.hasilWalikan {
+    background-color: #f8f9fa;
+}
+.tombolWalikan {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+}
+#salin {
+    background-color: #007aff;
+}
+#hapus {
+    background-color: #bf212f;
+}
+#salin::before {
+    content: url('data:image/svg+xml, %3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" height="18" width="18" viewBox="0 0 18 18"%3E%3Cpath d="M14.625 15H4.875q-0.45 0 -0.787 -0.337 -0.337 -0.337 -0.337 -0.787V1.875q0 -0.45 0.337 -0.787 0.337 -0.337 0.787 -0.337h6.525L15.75 5.1V13.875q0 0.45 -0.337 0.787 -0.337 0.337 -0.787 0.337ZM10.837 5.588V1.875H4.875v12h9.75V5.588ZM2.625 17.25q-0.45 0 -0.787 -0.337Q1.5 16.575 1.5 16.125V4.519h1.125V16.125h9.338v1.125Zm2.25 -15.375v3.712V1.875v12V1.875Z"/%3E%3C/svg%3E');
+    margin-right: 4px;
+}
+#hapus::before {
+    content: url('data:image/svg+xml, %3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" height="18" width="18" viewBox="0 0 18 18"%3E%3Cpath d="M4.894 15.75q-0.469 0 -0.797 -0.328T3.769 14.625V3.938H3v-1.125h3.525V2.25h4.95v0.563H15v1.125h-0.769V14.625q0 0.45 -0.338 0.788 -0.338 0.338 -0.788 0.338Zm8.212 -11.813h-8.212V14.625h8.212Zm-6.225 9.075h1.125V5.531h-1.125Zm3.113 0h1.125V5.531h-1.125Zm-5.1 -9.075V14.625Z"/%3E%3C/svg%3E');
+    margin-right: 4px;
+}
+#hasilSalin {
+    margin: 18px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.salinKata {
+    color: #007aff;
+    position: absolute;
+}
+.salinKataNo {
+    color: #bf212f;
+    position: absolute;
+}
+.salinKata, .salinKataNo {
+    transition: .1s;
+    animation: 6s forwards fadein;
+    opacity: 1;
+    text-align: center;
+    display: block;
+}
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@media (max-width: 500px){
+    .bungkus h1 {
+        font-size: 24px;
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+    }
+    textarea {
+        min-height: 130px;
+    }
+}
